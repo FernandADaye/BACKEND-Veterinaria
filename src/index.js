@@ -19,6 +19,15 @@ const idDueños = [
   { id: 5, nombre: "Levi ", mascota: "conejo " },
 ];
 
+// ahora si, los verdaderos endpoints/ recursos que usaré :
+
+//get 🟢
+app.get('/d', (req, res) => {
+    res.json(idDueños)
+})
+
+//
+
 // indica donde será el puerto, la funcion menciona que es lo que se hara cuando se inice el servidor
 app.listen(PORT, () => {
   console.log(`Jaló en el puerto ${PORT}`);
