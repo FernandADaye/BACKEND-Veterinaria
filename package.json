@@ -4,6 +4,10 @@
   "description": "simulador a una bd, proyecyo de kata devf",
   "main": "index.js",
   "scripts": {
+    "start": "node src/index.js",
+    "dev": "./node_modules/nodemon/bin/nodemon.js src/index.js",
+    "dev-w": "node ./node_modules/nodemon/bin/nodemon.js src/index.js",
+    "global": "nodemon ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
