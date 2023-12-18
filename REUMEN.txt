@@ -1,0 +1,3 @@
+PARA INICIAR:
+  iniciar npm: npm init
+  intalar Express: npm i express
