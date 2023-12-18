@@ -1,0 +1,22 @@
+{
+  "name": "veterinariabackend",
+  "version": "1.0.0",
+  "description": "simulador a una bd, proyecyo de kata devf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FernandADaye/BACKEND-Veterinaria.git"
+  },
+  "author": "Dayé",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FernandADaye/BACKEND-Veterinaria/issues"
+  },
+  "homepage": "https://github.com/FernandADaye/BACKEND-Veterinaria#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
