@@ -7,6 +7,9 @@ app.use(express.json());
 const PORT = 3000;
 
 // es necesario hacer una prueva para que se vea reflejado en el servidor
+// primero menciona que endpoint es (get )
+// segundo, la dirección en donde se verá (path)
+// lo demas es la function que contendrá la lógica 
 app.get("/", (req, res) => {
     console.log("req", req);
     res.send("ya funciona o no?");
