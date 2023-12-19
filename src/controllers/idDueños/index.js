@@ -15,15 +15,16 @@ const get = (req, res) => {
 }
 
 // ⬜⬜⬜⬜ metodo post ⬜⬜⬜⬜ //
-    const post = (req, res) => {
+    const crear = (req, res) => {
     try{
-        const idDueños = objetoIdDueño.getDueños();
-        res.status(200).json(idDueños);
+        const nuevaInfo = req.body;
+        objetoIdDueño.crearnuevaInfo(nuevaInfo);
+        res.status(201).json({ message: 'todo bien', data: nuevaInfo });
     } catch(error) {
         //lo siguiente es para hacer una gestion de errores en el caso de que algo no sa
     res.status(500).json({ message: 'todo mal ' });
     }
-}
+};
 
 // ⬜⬜⬜⬜ metodo patch ⬜⬜⬜⬜ //
 const patch = (req, res) => {

@@ -26,7 +26,7 @@ class idDueños {
         }
 
     //💜 post
-        nuevaInfo (){
+        crearnuevaInfo (nuevaInfo){
             this.idDueños.push(nuevaInfo);
         }
 
