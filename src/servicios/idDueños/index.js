@@ -18,6 +18,7 @@ class idDueños {
         }
 
     // aqui se encontraran todos los endpoints que se usarán  (un poco diferentes, pero hacen lo mismmo )
+
     //💜 get 
         getDueños (){
             return this.idDueños
@@ -39,7 +40,6 @@ class idDueños {
             const posicion = this.idDueños.findIndex(idDueño=> idDueño.id===parseInt(idBorrado));
             this.idDueños.splice(posicion, 1);
         }
-
     }
 
     module.exports = { idDueños }
