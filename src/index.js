@@ -37,6 +37,18 @@ app.post('/d', (req, res) => {
     res.status(201).json({ message: 'todo bien ', data: nuevaInfo });
 });
 
+// patch 🟢
+app.patch('/d/:id', (req, res) => {
+    const idModificado = req.params.id;
+    const nuevoDato = req.body;
+    const posicion = idDueños.findIndex(idDueño=> idDueño.id===parseInt(idModificado));
+    idDueños[posicion] = { ...idDueños[posicion], ...nuevoDato };
+    res.status(200).json({ message: 'Cambio hecho 😎', id: idModificado });
+});
+
+
+
+
 // indica donde será el puerto, la funcion menciona que es lo que se hara cuando se inice el servidor
 app.listen(PORT, () => {
     console.log(`Jaló en el puerto ${PORT}`);
