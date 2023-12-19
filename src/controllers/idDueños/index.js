@@ -3,8 +3,8 @@ const { idDueños} = require ('../../servicios/idDueños/index')
 //para sacar tosidDueñosdo lo que se encuentra en ese objeto (idDueño)
 const objetoIdDueño = new idDueños();
 
-// ⬜⬜⬜⬜ metodo get ⬜⬜⬜⬜ //
-const get = (req, res) => {
+// ⬜⬜⬜⬜ metodo get ⬜⬜⬜⬜🟩 //
+const traer = (req, res) => {
     try{
         const idDueños = objetoIdDueño.getDueños();
         res.status(200).json(idDueños);
@@ -14,7 +14,7 @@ const get = (req, res) => {
     }
 }
 
-// ⬜⬜⬜⬜ metodo post ⬜⬜⬜⬜ //
+// ⬜⬜⬜⬜ metodo post ⬜⬜⬜⬜🟩 //
     const crear = (req, res) => {
     try{
         const nuevaInfo = req.body;
