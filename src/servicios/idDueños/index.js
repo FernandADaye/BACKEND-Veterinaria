@@ -22,6 +22,7 @@ class idDueños {
     //💜 get 
         getDueños (){
             return this.idDueños
+            
         }
 
     //💜 post
