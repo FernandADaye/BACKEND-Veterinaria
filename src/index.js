@@ -47,6 +47,13 @@ app.patch('/d/:id', (req, res) => {
 });
 
 
+//delete 🟢
+app.delete('/d/:id', (req, res) => {
+    const idBorrado = req.params.id;
+    const posicion = idDueños.findIndex(idDueño=> idDueño.id===parseInt(idBorrado));
+    idDueños.splice(posicion, 1);
+    res.status(200).json({ message: 'Enemigo abatido ', id: idBorrado });
+});
 
 
 // indica donde será el puerto, la funcion menciona que es lo que se hara cuando se inice el servidor
