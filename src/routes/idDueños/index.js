@@ -12,3 +12,5 @@ dueñosRutas.get('/', traer)
 dueñosRutas.post('/', crear )
 dueñosRutas.patch('/:id', editarInfo )
 dueñosRutas.delete('/:id', eliminar )
+
+module.exports = {dueñosRutas};
