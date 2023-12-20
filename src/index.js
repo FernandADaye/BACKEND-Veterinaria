@@ -1,16 +1,16 @@
-// esto es para express
+// esto es para llamar express
 const express = require('express');
+// esto es para llamar al servidor 
 const app = express();
 // lo siguiente es para que funcione un metodo post
 app.use(express.json());
 // definir que puerto es
 const PORT = 3000;
-
 // importar las rutas 
 const {routerApi} = require('./routes/idDueños/main.routers')
-
+//de aqui bienen las rutas 
 routerApi(app);
-// indica donde será el puerto, la funcion menciona que es lo que se hara cuando se inice el servidor
+// este dice  donde será el puerto, y la funcion menciona que es lo que se hará cuando se inice el servidor
 app.listen(PORT, () => {
     console.log(`Jaló en el puerto ${PORT}`);
 });
