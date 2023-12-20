@@ -17,7 +17,7 @@ class idDueños {
         }
 
     // aqui se encontraran todos los endpoints que se usarán  (un poco diferentes, pero hacen lo mismmo )
-
+// en este caso, como es un array, los metodos que se usan para sacar, meter, medificar o borrar informacion son diferentes a como se usaría realmente en una BD
     //💜 get 
         getDueños (){
             return this.idDueños
