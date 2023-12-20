@@ -1,5 +1,5 @@
 // esto es para express
-const express = require("express");
+const express = require('express');
 const app = express();
 // lo siguiente es para que funcione un metodo post
 app.use(express.json());

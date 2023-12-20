@@ -6,4 +6,4 @@ const routerApi = (app) => {
 };
 
 
-module.exports(routerApi)
+module.exports = { routerApi };

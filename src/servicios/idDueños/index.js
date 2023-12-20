@@ -2,7 +2,7 @@
 class idDueños {
     constructor () {
         this.idDueños = []
-        this.generadorData = ();
+        this.generadorData();
         
     }
     //❌⭕❌⭕❌⭕❌⭕❌⭕❌⭕ es como si aquí estubierá la BD (sigamos fingiendo )❌⭕❌⭕❌⭕❌⭕❌⭕❌⭕❌⭕❌⭕
