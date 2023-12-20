@@ -36,7 +36,7 @@ class idDueños {
         }
 
     //💜 delete
-        idBorrado (idBorrado){
+        borrarInfo (idBorrado){
             const posicion = this.idDueños.findIndex(idDueño=> idDueño.id===parseInt(idBorrado));
             this.idDueños.splice(posicion, 1);
         }

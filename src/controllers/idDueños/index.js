@@ -40,10 +40,12 @@ const editarInfo = (req, res) => {
 }
 
 // ⬜⬜⬜⬜ metodo delete ⬜⬜⬜⬜🟥 //
-    const delet = (req, res) => {
+    const eliminar  = (req, res) => {
     try{
-        const idDueños = objetoIdDueño.getDueños();
-        res.status(200).json(idDueños);
+        const idBorrado = req.params.id;
+        objetoIdDueño.eliminar(idBorrado)
+        idDueños.splice(posicion, 1);
+        res.status(200).json({ message: 'Enemigo abatido ', id: idBorrado });
     } catch(error) {
         //lo siguiente es para hacer una gestion de errores en el caso de que algo no sa
     res.status(500).json({ message: 'todo mal ' });
