@@ -43,3 +43,6 @@ class idDueños {
     }
 
     module.exports = { idDueños }
+
+
+    // los servicios manejan los datos 

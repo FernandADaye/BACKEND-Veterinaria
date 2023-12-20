@@ -60,3 +60,5 @@ module.exports = {
     editarInfo,
     eliminar
 }
+
+// esto funciona para manejar las entradas y salidas de los servicios 

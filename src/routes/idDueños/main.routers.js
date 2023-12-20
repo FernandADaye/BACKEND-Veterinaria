@@ -4,6 +4,8 @@ const { dueñosRutas } = require("../idDueños/index");
 const routerApi = (app) => {
     app.use("/", dueñosRutas);
 };
-
 //obvio que es para exportar 
 module.exports = { routerApi };
+
+
+// se podria decir que envuelve a todas las rutas 

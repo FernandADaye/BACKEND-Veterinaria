@@ -18,3 +18,5 @@ dueñosRutas.delete('/:id', eliminar )
 
 //obvio que es para exportar 
 module.exports = {dueñosRutas};
+
+// aqui estan las rutas 
