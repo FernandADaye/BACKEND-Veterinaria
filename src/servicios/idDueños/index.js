@@ -1,20 +1,19 @@
 // aqui es donde comienza la estructura buena 
 class idDueños {
     constructor () {
-
         this.idDueños = []
-        this.generadorData = ()
+        this.generadorData = ();
         
     }
     //❌⭕❌⭕❌⭕❌⭕❌⭕❌⭕ es como si aquí estubierá la BD (sigamos fingiendo )❌⭕❌⭕❌⭕❌⭕❌⭕❌⭕❌⭕❌⭕
-    generadorData () {
+    generadorData() {
             this.idDueños = [
                 { id: 1, nombre: "Dayé", mascota: "gato" },
                 { id: 2, nombre: "Azul ", mascota: "ratón" },
                 { id: 3, nombre: "Erika ", mascota: "perro" },
                 { id: 4, nombre: "Leyla", mascota: "mapache " },
                 { id: 5, nombre: "Levi ", mascota: "conejo " },
-            ]
+            ];
         }
 
     // aqui se encontraran todos los endpoints que se usarán  (un poco diferentes, pero hacen lo mismmo )
@@ -31,9 +30,9 @@ class idDueños {
         }
 
     //💜 patch  
-        idModificado (idModificado){
+        modificacion (idModificado,nuevaInfo ){
             const posicion = this.idDueños.findIndex(idDueño=> idDueño.id===parseInt(idModificado));
-            this.idDueños[posicion] = { ...this.idDueños[posicion], ...nuevoDato };
+            this.idDueños[posicion] = { ...this.idDueños[posicion], ...nuevaInfo };
         }
 
     //💜 delete

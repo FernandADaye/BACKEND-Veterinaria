@@ -26,18 +26,20 @@ const traer = (req, res) => {
     }
 };
 
-// ⬜⬜⬜⬜ metodo patch ⬜⬜⬜⬜ //
-const patch = (req, res) => {
+// ⬜⬜⬜⬜ metodo patch ⬜⬜⬜⬜🟥//
+const editarInfo = (req, res) => {
     try{
-        const idDueños = objetoIdDueño.getDueños();
-        res.status(200).json(idDueños);
+        const idModificado = req.params.id;
+        const nuevaInfo = req.body;
+        objetoIdDueño.idModificado(idModificado, nuevaInfo);
+        res.status(200).json({message:'Todo salío bien', id: idModificado});
     } catch(error) {
         //lo siguiente es para hacer una gestion de errores en el caso de que algo no sa
     res.status(500).json({ message: 'todo mal ' });
     }
 }
 
-// ⬜⬜⬜⬜ metodo delete ⬜⬜⬜⬜ //
+// ⬜⬜⬜⬜ metodo delete ⬜⬜⬜⬜🟥 //
     const delet = (req, res) => {
     try{
         const idDueños = objetoIdDueño.getDueños();

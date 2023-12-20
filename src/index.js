@@ -40,9 +40,9 @@ app.post('/d', (req, res) => {
 // patch 🟢
 app.patch('/d/:id', (req, res) => {
     const idModificado = req.params.id;
-    const nuevoDato = req.body;
+    const nuevaInfo = req.body;
     const posicion = idDueños.findIndex(idDueño=> idDueño.id===parseInt(idModificado));
-    idDueños[posicion] = { ...idDueños[posicion], ...nuevoDato };
+    idDueños[posicion] = { ...idDueños[posicion], ...nuevaInfo };
     res.status(200).json({ message: 'Cambio hecho 😎', id: idModificado });
 });
 
