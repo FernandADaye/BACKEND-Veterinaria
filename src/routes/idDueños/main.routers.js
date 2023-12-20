@@ -1,2 +1,2 @@
 const express = require('express');
-require ('../idDueños/index')
+const {dueñosRutas} = require ('../idDueños/index');
