@@ -31,7 +31,7 @@ const editarInfo = (req, res) => {
     try{
         const idModificado = req.params.id;
         const nuevaInfo = req.body;
-        objetoIdDueño.idModificado(idModificado, nuevaInfo);
+        objetoIdDueño.modificacion(idModificado, nuevaInfo);
         res.status(200).json({message:'Todo salío bien', id: idModificado});
     } catch(error) {
         //lo siguiente es para hacer una gestion de errores en el caso de que algo no sa
@@ -43,7 +43,7 @@ const editarInfo = (req, res) => {
     const eliminar  = (req, res) => {
     try{
         const idBorrado = req.params.id;
-        objetoIdDueño.eliminar(idBorrado)
+        objetoIdDueño.borrarInfo(idBorrado)
         idDueños.splice(posicion, 1);
         res.status(200).json({ message: 'Enemigo abatido ', id: idBorrado });
     } catch(error) {
@@ -53,3 +53,10 @@ const editarInfo = (req, res) => {
 
 
 };
+
+module.exports = {
+    traer,
+    crear, 
+    editarInfo,
+    eliminar
+}
