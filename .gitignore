@@ -1,4 +1,5 @@
 node_modules/
 .vscode
 DS_Store
+# si no pones esto estas muerto ⚠
 .env 
