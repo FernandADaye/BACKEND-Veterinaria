@@ -2,7 +2,7 @@
 const express = require('express');
 // esto es para llamar al servidor 
 const app = express();
-// lo siguiente es para que funcione un metodo post
+// lo siguiente es para que pueda recibir json 
 app.use(express.json());
 // definir que puerto es
 const PORT = 3000;

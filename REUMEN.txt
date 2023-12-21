@@ -2,3 +2,6 @@ PARA INICIAR:
   iniciar npm:◽◽◽◽◽◽◽◽◽◽◽ npm init
   intalar Express:◽◽◽◽◽◽◽ npm i express
   instalar dotenv :◽◽◽◽◽◽ npm i dotenv
+
+  ⚠ si vas a hacer la parte frontend necesistas instalar lo sig: ⚠
+    instalar cors:◽◽◽◽◽◽◽◽◽◽◽ npm i cors
