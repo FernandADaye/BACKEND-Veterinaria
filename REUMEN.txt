@@ -2,6 +2,8 @@ PARA INICIAR:
   iniciar npm:◽◽◽◽◽◽◽◽◽◽◽ npm init
   intalar Express:◽◽◽◽◽◽◽ npm i express
   instalar dotenv :◽◽◽◽◽◽ npm i dotenv
+  intalar la libreria que hará conexion a bd: ◽◽◽◽◽◽◽ npm i pg 
 
   ⚠ si vas a hacer la parte frontend necesistas instalar lo sig: ⚠
     instalar cors:◽◽◽◽◽◽◽◽◽◽◽ npm i cors
+
