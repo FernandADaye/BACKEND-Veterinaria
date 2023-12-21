@@ -7,8 +7,9 @@ const app = express();
 // esto es para hacer la parte de frontend (cors)
 const cors = require("cors");
 
-// definir que puerto es
-const PORT = 3000;
+// definir que puerto es con el .env, para eso primero se debe importar 
+const {config} = require('../src/config/index');
+const PORT = config.port;
 
 // lo siguiente es para que pueda recibir json
 app.use(express.json());
