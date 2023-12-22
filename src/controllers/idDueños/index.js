@@ -4,9 +4,9 @@ const { idDueños} = require ('../../servicios/idDueños/index')
 const objetoIdDueño = new idDueños();
 
 // ⬜⬜⬜⬜ metodo get ⬜⬜⬜⬜🟩 //
-const traer = (req, res) => {
+const traer = async (req, res) => {
     try{
-        const idDueños = objetoIdDueño.getDueños();
+        const idDueños = await objetoIdDueño.getDueños();
         res.status(200).json(idDueños);
     } catch(error) {
         //lo siguiente es para hacer una gestion de errores en el caso de que algo no salga bien 
@@ -15,9 +15,9 @@ const traer = (req, res) => {
 }
 
 // ⬜⬜⬜⬜ metodo post ⬜⬜⬜⬜🟩 //
-    const crear = (req, res) => {
+    const crear = async (req, res) => {
     try{
-        const nuevaInfo = req.body;
+        const nuevaInfo = await req.body;
         objetoIdDueño.crearnuevaInfo(nuevaInfo);
         res.status(201).json({ message: 'todo bien', data: nuevaInfo });
     } catch(error) {

@@ -15,7 +15,8 @@ class idDueños {
             SELECT * FROM idDueños 
             `
             const resultado= await conect.query(queryStrings);
-            console.log(resultado);
+            // console.log(resultado);
+            return resultado.rows;
         }
 
     //💜 post
