@@ -1,27 +1,21 @@
 // aqui es donde comienza la estructura buena 
+const conect = require ('../../db/connection')
+
 class idDueños {
     constructor () {
         this.idDueños = []
-        this.generadorData();
         
     }
-    //❌⭕❌⭕❌⭕❌⭕❌⭕❌⭕ es como si aquí estubierá la BD (sigamos fingiendo )❌⭕❌⭕❌⭕❌⭕❌⭕❌⭕❌⭕❌⭕
-    generadorData() {
-            this.idDueños = [
-                { id: 1, nombre: "Dayé", mascota: "gato" },
-                { id: 2, nombre: "Azul ", mascota: "ratón" },
-                { id: 3, nombre: "Erika ", mascota: "perro" },
-                { id: 4, nombre: "Leyla", mascota: "mapache " },
-                { id: 5, nombre: "Levi ", mascota: "conejo " },
-            ];
-        }
 
     // aqui se encontraran todos los endpoints que se usarán  (un poco diferentes, pero hacen lo mismmo )
 // en este caso, como es un array, los metodos que se usan para sacar, meter, medificar o borrar informacion son diferentes a como se usaría realmente en una BD
     //💜 get 
-        getDueños (){
-            return this.idDueños
-            
+        async getDueños (){
+            const queryStrings= `
+            SELECT * FROM idDueños 
+            `
+            const resultado= await conect.query(queryStrings);
+            console.log(resultado);
         }
 
     //💜 post

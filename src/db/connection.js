@@ -1,6 +1,6 @@
 const { Pool} = require ('pg')
 const {config } = require ('../config/index');
-const { text } = require('express');
+// const { text } = require('express');
 
 // hacer una destructuracion de config, se simplifica 
 const {
@@ -11,7 +11,7 @@ const {
     passwordDB
 } = config;
 
-new Pool ({
+const pool = new Pool ({
     user:userDB,
     password:passwordDB,
     host:hostDB,
@@ -20,6 +20,6 @@ new Pool ({
 })
 
 module.exports = {
-    query: (queryStrings, Arrayparams) =>Pool.query(queryStrings, Arrayparams),
+    query: (queryStrings, arrayparams) => pool.query(queryStrings, arrayparams),
     close: () => Pool.end()
 }
