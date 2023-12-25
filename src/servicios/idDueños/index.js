@@ -11,17 +11,36 @@ class idDueños {
 // en este caso, como es un array, los metodos que se usan para sacar, meter, medificar o borrar informacion son diferentes a como se usaría realmente en una BD
     //💜 get 
         async getDueños (){
-            const queryStrings= `
-            SELECT * FROM idDueños 
-            `
-            const resultado= await conect.query(queryStrings);
-            // console.log(resultado);
-            return resultado.rows;
+            try {
+                const queryStrings= `
+                SELECT * FROM idDueños 
+                `
+                const resultado= await conect.query(queryStrings);
+                // console.log(resultado);
+                return resultado.rows;
+                
+            } catch (error) {
+                throw new Error(error)
+            }
+            
+            
         }
 
     //💜 post
-        crearnuevaInfo (nuevaInfo){
-            this.idDueños.push(nuevaInfo);
+    async crearnuevaInfo (nuevaInfo){
+            try {
+                const queryStrings= `
+                
+                `;
+                const params = [];
+                const resultado= await conect.query(queryStrings, params);
+
+
+                
+                
+            } catch (error) {
+                throw new Error(error)
+            }
         }
 
     //💜 patch  

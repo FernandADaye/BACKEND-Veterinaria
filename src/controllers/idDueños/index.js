@@ -18,8 +18,9 @@ const traer = async (req, res) => {
     const crear = async (req, res) => {
     try{
         const nuevaInfo = await req.body;
-        objetoIdDueño.crearnuevaInfo(nuevaInfo);
-        res.status(201).json({ message: 'todo bien', data: nuevaInfo });
+        const okregistro = objetoIdDueño.crearnuevaInfo(nuevaInfo);
+        const mensaje = okregistro === true ?'bien' : 'mal'
+        res.status(201).json({ message: mensaje , data: nuevaInfo });
     } catch(error) {
         //lo siguiente es para hacer una gestion de errores en el caso de que algo no sa
     res.status(500).json({ message: 'todo mal ' });
