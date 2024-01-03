@@ -28,11 +28,16 @@ class idDueños {
 
     //💜 post
     async crearnuevaInfo (nuevaInfo){
+    const {
+    nombre,
+    mascota
+    }= nuevaInfo
+
             try {
                 const queryStrings= `
-                
+                INSERT INTO idDueños( nombre, mascota) VALUES ( $1, $2 )
                 `;
-                const params = [];
+                const params = [nombre, mascota];
                 const resultado= await conect.query(queryStrings, params);
 
 
