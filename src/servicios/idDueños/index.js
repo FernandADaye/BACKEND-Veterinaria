@@ -28,10 +28,10 @@ class idDueños {
 
     //💜 post
     async crearnuevaInfo (nuevaInfo){
-    const {
-    nombre,
-    mascota
-    }= nuevaInfo
+        const {
+        nombre,
+        mascota
+        }= nuevaInfo
 
             try {
                 const queryStrings= `
@@ -49,9 +49,27 @@ class idDueños {
         }
 
     //💜 patch  
-        modificacion (idModificado,nuevaInfo ){
-            const posicion = this.idDueños.findIndex(idDueño=> idDueño.id===parseInt(idModificado));
-            this.idDueños[posicion] = { ...this.idDueños[posicion], ...nuevaInfo };
+        async modificacion (idModificado,nuevaInfo ){
+            const{
+                nombre,
+                mascota
+            }=nuevaInfo
+            try {
+                const queryStrings= `
+                UPDATE idDueños SET nombre = $1, mascota = $2 WHERE iddueño = $3
+                `;
+                const posicion = this.idDueños.findIndex(idDueño=> idDueño.id===parseInt(idModificado));
+                this.idDueños[posicion] = { ...this.idDueños[posicion], ...nuevaInfo };
+                const params = [nombre, mascota,idModificado];
+                const resultado= await conect.query
+            (queryStrings, params);
+                console.log(resultado);
+                
+                
+            } catch (error) {
+                throw new Error(error)
+            }
+
         }
 
     //💜 delete
