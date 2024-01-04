@@ -73,9 +73,19 @@ class idDueños {
         }
 
     //💜 delete
-        borrarInfo (idBorrado){
+        async borrarInfo (idBorrado){
             const posicion = this.idDueños.findIndex(idDueño=> idDueño.id===parseInt(idBorrado));
             this.idDueños.splice(posicion, 1);
+            try {
+                const queryStrings= `
+                DELETE FROM idDueños WHERE iddueño = $1
+                `;
+                const params = [idBorrado];
+                const resultado= await conect.query(queryStrings, params);
+                
+            } catch (error) {
+                throw new Error(error)
+            }
         }
     }
 
